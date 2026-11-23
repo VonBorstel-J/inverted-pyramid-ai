@@ -5,11 +5,14 @@ import re
 # Patterns that mark raw PHI. De-identified text has these replaced by [TAGS].
 PATTERNS = {
     "ssn": re.compile(r"\b\d{3}-\d{2}-\d{4}\b|\bSSN\s*[:#]?\s*\d{9}\b", re.I),
-    "mrn": re.compile(r"\bMRN\s*[:#-]?\s*[A-Z0-9-]*\d{4,}|\bMR-?\d{5,}\b|\bmedical record (?:number|no\.?|#)\s*[:#]?\s*\S*\d{4,}", re.I),
+    "mrn": re.compile(
+        r"\b(?:MRN|MR#|chart\s*#|medical record(?: number| no\.?| #)?|sending record|record #)\s*[:#-]?\s*[A-Z]{0,3}[/-]?\d{4,}"
+        r"|\bMR-\d{4,}(?:-[A-Z])?\b|\b[A-Z]{2}/\d{5,}\b", re.I),
     "phone": re.compile(r"(?:\(\d{3}\)\s*|\b\d{3}[-.\s])\d{3}[-.]\d{4}\b"),
     "dob": re.compile(
-        r"\b(?:DOB|D\.O\.B\.?|date of birth|born(?: on)?)\s*[:#-]?\s*"
-        r"(?:\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{4}-\d{2}-\d{2}|[A-Z][a-z]{2,8}\.? \d{1,2},? \d{4})", re.I),
+        r"\b(?:DOB|D\.O\.B\.?|date of birth|birth ?date|born)\b[^.\n\d]{0,25}"
+        r"(?:\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\d{4}-\d{2}-\d{2}|[A-Z][a-z]{2,8}\.? \d{1,2},? \d{4}"
+        r"|\d{1,2} [A-Z][a-z]{2,8}\.? \d{4})", re.I),
     "slash_date": re.compile(r"\b\d{1,2}/\d{1,2}/\d{4}\b"),
 }
 
