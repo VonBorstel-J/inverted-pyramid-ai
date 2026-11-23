@@ -1,0 +1,7 @@
+duckdb
+pydantic>=2
+rank-bm25
+pandas
+pyarrow
+streamlit
+requests
