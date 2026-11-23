@@ -67,7 +67,10 @@ def start(model="chat", port=8091, embedding=None, wait=180):
         raise FileNotFoundError(cmd[2])
     STATE_DIR.mkdir(exist_ok=True)
     logf = open(STATE_DIR / f"local_server_{port}.log", "ab")
-    proc = subprocess.Popen(cmd, stdout=logf, stderr=subprocess.STDOUT, start_new_session=True)
+    env = dict(os.environ)  # the release build ships its .so files next to the binary
+    libdir = os.path.dirname(cmd[0])
+    env["LD_LIBRARY_PATH"] = libdir + (":" + env["LD_LIBRARY_PATH"] if env.get("LD_LIBRARY_PATH") else "")
+    proc = subprocess.Popen(cmd, stdout=logf, stderr=subprocess.STDOUT, start_new_session=True, env=env)
     ledger = _janitor(["start", "--what", f"llama-server {Path(cmd[2]).name}", "--owner",
                        "inverted-pyramid", "--until", "2h", "--pid", str(proc.pid)])
     handle = {"pid": proc.pid, "port": port, "model": cmd[2], "embedding": embedding,
