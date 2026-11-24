@@ -1,0 +1,12776 @@
+{
+ "split": "hard",
+ "db": "warehouse_hard.duckdb",
+ "providers": {
+  "wave1.billing": "local",
+  "answer": "local"
+ },
+ "limit": 200,
+ "started": "2026-11-24T05:40:00+00:00",
+ "retrieval": {
+  "questions": 14,
+  "hit@5": 0.8571,
+  "recall@5": 0.8571,
+  "trap_hit@5": 1.0,
+  "superseded_returned": 0,
+  "modes": {
+   "hybrid": 14
+  }
+ },
+ "extraction": {
+  "diagnosis": 0.575,
+  "instability_evidence": 0.89,
+  "ground_contraindication": 0.39,
+  "physician_certification": 0.865,
+  "loaded_miles": 0.645,
+  "overall": 0.673,
+  "charts": 200,
+  "rejected": 17,
+  "median_ms": 45441.9
+ },
+ "redaction": {
+  "recall_by_type": {
+   "address": 0.17,
+   "age": 0.0556,
+   "dob": 0.015,
+   "email": 1.0,
+   "mrn": 0.185,
+   "name": 0.9475,
+   "phone": 0.02,
+   "plate": 0.145,
+   "serial": 0.0,
+   "ssn": 0.18,
+   "url": 1.0
+  },
+  "recall": 0.4884,
+  "precision": 0.8939,
+  "leaked": 1367,
+  "identifiers": 2672,
+  "redactions": 1998,
+  "median_ms_names": 23113.8,
+  "names_provider": "local"
+ },
+ "reconciliation": {
+  "claims": 200,
+  "at_risk_accuracy": 0.4,
+  "policy_accuracy": 0.0,
+  "policy_version_accuracy": 0.7,
+  "has_version_truth": true
+ },
+ "answers": {
+  "questions": 8,
+  "answered": 7,
+  "refusal_accuracy": 1.0,
+  "groundedness": 1.0,
+  "numeric_correctness": 0.3333,
+  "kind_accuracy": 1.0,
+  "quality": 0.8834,
+  "median_ms": 75629.6
+ },
+ "servers": {
+  "embed": {
+   "ready_s": 2.1,
+   "ledger_id": "11240539-c646",
+   "warmed": true,
+   "docs": 176,
+   "queries": 23,
+   "hits": 199,
+   "computed": 0,
+   "ms": 0.0
+  },
+  "chat": {
+   "ready_s": 21.5,
+   "ledger_id": "11240540-836c"
+  }
+ },
+ "quality_lines": 417,
+ "ms_total": 1392101,
+ "per_item": {
+  "charts": [
+   {
+    "doc_id": "EP-2026-000186",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19853.9,
+     "extract": 41742.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001582",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23986.9,
+     "extract": 47747.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001363",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 33373.8,
+     "extract": 58105.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001576",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27009.7,
+     "extract": 58409.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000201",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27615.1,
+     "extract": 48928.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001481",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 33209.7,
+     "extract": 59713.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000300",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 31019.2,
+     "extract": 48971.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000590",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25276.1,
+     "extract": 59647.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000680",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34644.9,
+     "extract": 58652.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001946",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ]
+    },
+    "ms": {
+     "names": 28980.3,
+     "extract": 58734.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000116",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 28362.1,
+     "extract": 65883.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001903",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 35466.8,
+     "extract": 64127.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000968",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 29469.4,
+     "extract": 63012.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000334",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 36777.2,
+     "extract": 62516.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000279",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.2,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 41803.4,
+     "extract": 62746.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000627",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 30419.5,
+     "extract": 64636.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000158",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 41342.3,
+     "extract": 53529.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001838",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "router: RouterError: wave1.billing.extract: reply failed schema EpcrExtract: 1 validation error for EpcrExtract\nloaded_miles\n  Input should be less than or equal to 2000 [type=less_",
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 35165.0,
+     "extract": 89615.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000180",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 38453.5,
+     "extract": 52906.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001871",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 35508.7,
+     "extract": 67155.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000720",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 29541.0,
+     "extract": 52979.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-001819",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 33000.8,
+     "extract": 63961.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000199",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 31897.5,
+     "extract": 64245.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-001574",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34535.5,
+     "extract": 64671.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000331",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 24889.3,
+     "extract": 63648.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-000753",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27499.1,
+     "extract": 62740.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001229",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 31474.5,
+     "extract": 63525.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000749",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34192.0,
+     "extract": 38778.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001280",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18419.2,
+     "extract": 38536.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001195",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 11044.1,
+     "extract": 33898.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001465",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27243.6,
+     "extract": 50289.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000817",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 35172.2,
+     "extract": 28426.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001965",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 14845.6,
+     "extract": 31839.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000063",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 15809.1,
+     "extract": 31997.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001852",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19138.3,
+     "extract": 37250.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001733",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 15776.5,
+     "extract": 37656.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000491",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 31699.9,
+     "extract": 38497.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001170",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18449.6,
+     "extract": 28445.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-001586",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ]
+    },
+    "ms": {
+     "names": 18978.6,
+     "extract": 36093.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000235",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34066.0,
+     "extract": 36041.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001111",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34796.8,
+     "extract": 41459.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001723",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23071.8,
+     "extract": 26028.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000999",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 32256.9,
+     "extract": 26453.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000382",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 16758.1,
+     "extract": 39706.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000526",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22738.5,
+     "extract": 37869.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000175",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18633.8,
+     "extract": 66648.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001154",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 16882.0,
+     "extract": 40822.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001066",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 15042.5,
+     "extract": 38353.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000919",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20334.3,
+     "extract": 45475.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001128",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 24358.1,
+     "extract": 44880.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001628",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18479.3,
+     "extract": 63916.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001942",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.2,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26093.1,
+     "extract": 40169.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000906",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 13207.1,
+     "extract": 34750.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001121",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20497.1,
+     "extract": 63933.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001776",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 31092.7,
+     "extract": 66976.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000679",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23502.4,
+     "extract": 36110.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000237",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25368.6,
+     "extract": 43587.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001632",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21588.7,
+     "extract": 64298.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001341",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18885.5,
+     "extract": 31641.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000634",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18708.7,
+     "extract": 39108.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001084",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23752.0,
+     "extract": 66063.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-001207",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18613.1,
+     "extract": 31137.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000592",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 28298.0,
+     "extract": 31567.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001291",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18214.8,
+     "extract": 36506.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001884",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21704.2,
+     "extract": 39931.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001388",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18326.9,
+     "extract": 36103.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000210",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 16713.4,
+     "extract": 64829.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001842",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18648.5,
+     "extract": 36313.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-000007",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ]
+    },
+    "ms": {
+     "names": 17691.1,
+     "extract": 63392.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000637",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 28010.3,
+     "extract": 32654.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000060",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18141.8,
+     "extract": 50066.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000447",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19971.2,
+     "extract": 41455.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000742",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22324.4,
+     "extract": 51493.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001828",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 14367.4,
+     "extract": 38595.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001187",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22038.2,
+     "extract": 31156.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000371",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 13222.1,
+     "extract": 27701.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000381",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21880.5,
+     "extract": 33003.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000469",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21377.1,
+     "extract": 47003.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000688",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26700.4,
+     "extract": 38646.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000900",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20732.3,
+     "extract": 41210.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000758",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 17934.2,
+     "extract": 39092.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001609",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20963.8,
+     "extract": 41864.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000219",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21544.9,
+     "extract": 38398.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-001939",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20980.9,
+     "extract": 40632.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001119",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19277.6,
+     "extract": 36694.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000024",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 17842.3,
+     "extract": 40879.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000067",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20698.7,
+     "extract": 41704.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001164",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 17567.7,
+     "extract": 40372.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001544",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 17915.5,
+     "extract": 41255.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001163",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18726.2,
+     "extract": 38153.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001052",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "physician_certification": false,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.2,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34267.4,
+     "extract": 42515.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001825",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 17591.3,
+     "extract": 40499.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001994",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 29792.4,
+     "extract": 35109.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001081",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18533.6,
+     "extract": 37638.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000606",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18531.5,
+     "extract": 41631.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000364",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20591.3,
+     "extract": 48417.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001673",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 30922.1,
+     "extract": 57902.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001665",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      1,
+      1
+     ],
+     "age": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 31316.1,
+     "extract": 39963.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000360",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25028.1,
+     "extract": 46026.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001440",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      1,
+      1
+     ],
+     "age": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ]
+    },
+    "ms": {
+     "names": 40615.9,
+     "extract": 39793.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000722",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22466.3,
+     "extract": 42116.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001536",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      3,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 17964.0,
+     "extract": 35461.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001076",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18766.4,
+     "extract": 48016.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000363",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 28129.3,
+     "extract": 48905.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000915",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21180.7,
+     "extract": 49394.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001190",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ]
+    },
+    "ms": {
+     "names": 22605.5,
+     "extract": 56091.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000897",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 35326.6,
+     "extract": 65913.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000930",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 38570.8,
+     "extract": 62057.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000084",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 38785.6,
+     "extract": 47848.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000453",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20592.8,
+     "extract": 46982.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001813",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23621.2,
+     "extract": 52623.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001243",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 46331.2,
+     "extract": 43937.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000445",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19764.4,
+     "extract": 18637.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000886",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 9130.0,
+     "extract": 27038.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001593",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21489.4,
+     "extract": 25361.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-000298",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 16094.8,
+     "extract": 34999.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001748",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18882.8,
+     "extract": 35372.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-001248",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18279.7,
+     "extract": 46242.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000128",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 38335.7,
+     "extract": 57371.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001437",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25181.8,
+     "extract": 60837.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-000570",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18754.3,
+     "extract": 40047.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001845",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 16453.4,
+     "extract": 36418.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001945",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ]
+    },
+    "ms": {
+     "names": 17975.1,
+     "extract": 39082.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000528",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18811.1,
+     "extract": 42164.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001565",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22359.2,
+     "extract": 41614.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001860",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23992.0,
+     "extract": 41754.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001834",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20781.6,
+     "extract": 34917.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000979",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21921.2,
+     "extract": 42964.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001344",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20884.3,
+     "extract": 42951.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001908",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 41602.7,
+     "extract": 76051.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001472",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ]
+    },
+    "ms": {
+     "names": 40813.0,
+     "extract": 47928.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000823",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27540.4,
+     "extract": 37143.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001169",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22981.0,
+     "extract": 38800.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000732",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20369.0,
+     "extract": 39127.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000369",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 7327.2,
+     "extract": 40413.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000563",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22450.1,
+     "extract": 41374.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001259",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21465.0,
+     "extract": 47989.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001571",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      2,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19503.8,
+     "extract": 39655.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-001165",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 18780.2,
+     "extract": 42674.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-000097",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 24889.6,
+     "extract": 44385.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001634",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20979.6,
+     "extract": 42237.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000044",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "physician_certification": false,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.2,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20743.0,
+     "extract": 40028.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-001183",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "router: RouterError: wave1.billing.extract: reply failed schema EpcrExtract: 1 validation error for EpcrExtract\nloaded_miles\n  Input should be less than or equal to 2000 [type=less_",
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19750.6,
+     "extract": 63522.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000962",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23088.9,
+     "extract": 47371.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-000335",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25478.7,
+     "extract": 44313.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000456",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22180.9,
+     "extract": 47531.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001656",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 24156.6,
+     "extract": 48685.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000975",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23522.7,
+     "extract": 50060.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000996",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21179.2,
+     "extract": 43578.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000966",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26360.1,
+     "extract": 52707.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000028",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": false,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 37363.7,
+     "extract": 52058.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000054",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26422.4,
+     "extract": 59565.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000647",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27911.7,
+     "extract": 56015.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001398",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": false,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 45410.6,
+     "extract": 56602.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-001691",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25695.0,
+     "extract": 51460.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000187",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 29558.9,
+     "extract": 60074.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000341",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": false,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 41960.9,
+     "extract": 70420.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001290",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 37355.4,
+     "extract": 60321.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-001182",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 41409.8,
+     "extract": 56031.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001666",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26517.3,
+     "extract": 57637.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001811",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 30504.3,
+     "extract": 53765.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000678",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26893.5,
+     "extract": 62971.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000896",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21911.3,
+     "extract": 47231.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001114",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22722.7,
+     "extract": 43632.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000009",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20488.6,
+     "extract": 43871.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-001933",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22023.4,
+     "extract": 44666.0
+    }
+   },
+   {
+    "doc_id": "EP-2026-001635",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 24471.7,
+     "extract": 43154.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000305",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      1,
+      1
+     ],
+     "age": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26282.1,
+     "extract": 56313.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001233",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19954.7,
+     "extract": 45408.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001160",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20348.1,
+     "extract": 48625.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-001162",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22117.4,
+     "extract": 44328.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001950",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21493.6,
+     "extract": 44756.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001642",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19559.0,
+     "extract": 43736.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000254",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 19419.2,
+     "extract": 45233.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000485",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21201.6,
+     "extract": 43674.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001784",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 22086.8,
+     "extract": 54767.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001982",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25406.5,
+     "extract": 41554.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001138",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 20815.8,
+     "extract": 37479.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-000815",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      2,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21616.0,
+     "extract": 44121.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-000631",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23138.8,
+     "extract": 52025.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000938",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25924.9,
+     "extract": 47711.1
+    }
+   },
+   {
+    "doc_id": "EP-2026-001608",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 21287.5,
+     "extract": 46300.9
+    }
+   },
+   {
+    "doc_id": "EP-2026-000236",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      1,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 23640.7,
+     "extract": 57948.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001704",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25464.6,
+     "extract": 51835.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000194",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 25636.2,
+     "extract": 58965.3
+    }
+   },
+   {
+    "doc_id": "EP-2026-001013",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 26723.8,
+     "extract": 64542.8
+    }
+   },
+   {
+    "doc_id": "EP-2026-000422",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 33177.1,
+     "extract": 58414.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000415",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 29470.4,
+     "extract": 58814.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001941",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 27220.9,
+     "extract": 55609.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000062",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 29447.2,
+     "extract": 57493.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-000690",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      1,
+      1
+     ]
+    },
+    "ms": {
+     "names": 38193.9,
+     "extract": 83633.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-000550",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 42032.0,
+     "extract": 65450.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001530",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 34989.4,
+     "extract": 58034.2
+    }
+   },
+   {
+    "doc_id": "EP-2026-001225",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 1.0,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 37178.1,
+     "extract": 54333.7
+    }
+   },
+   {
+    "doc_id": "EP-2026-001562",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": false,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.4,
+    "note": null,
+    "redaction": {
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ]
+    },
+    "ms": {
+     "names": 36105.5,
+     "extract": 87703.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-001312",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 39777.2,
+     "extract": 87381.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000921",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.6,
+    "note": null,
+    "redaction": {
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 60411.8,
+     "extract": 94731.4
+    }
+   },
+   {
+    "doc_id": "EP-2026-000927",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": true
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "name": [
+      4,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "mrn": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 50734.0,
+     "extract": 90115.6
+    }
+   },
+   {
+    "doc_id": "EP-2026-001787",
+    "fields": {
+     "diagnosis": false,
+     "instability_evidence": false,
+     "ground_contraindication": false,
+     "physician_certification": false,
+     "loaded_miles": false
+    },
+    "accuracy": 0.0,
+    "note": "ground_contraindication is not a verbatim span of the chart",
+    "redaction": {
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "name": [
+      3,
+      4
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "age": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 46975.4,
+     "extract": 87102.5
+    }
+   },
+   {
+    "doc_id": "EP-2026-001958",
+    "fields": {
+     "diagnosis": true,
+     "instability_evidence": true,
+     "physician_certification": true,
+     "loaded_miles": true,
+     "ground_contraindication": false
+    },
+    "accuracy": 0.8,
+    "note": null,
+    "redaction": {
+     "name": [
+      4,
+      4
+     ],
+     "mrn": [
+      1,
+      1
+     ],
+     "ssn": [
+      0,
+      1
+     ],
+     "address": [
+      0,
+      1
+     ],
+     "dob": [
+      0,
+      1
+     ],
+     "serial": [
+      0,
+      1
+     ],
+     "url": [
+      1,
+      1
+     ],
+     "phone": [
+      0,
+      1
+     ],
+     "email": [
+      1,
+      1
+     ],
+     "plate": [
+      0,
+      1
+     ]
+    },
+    "ms": {
+     "names": 48374.0,
+     "extract": 82007.7
+    }
+   }
+  ],
+  "retrieval": [
+   {
+    "id": "truth-sop-0",
+    "q": "For rotor restart inspection, what is the current minimum observation time?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "SOP-0-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "SOP-PAD-B",
+      "Sec 5.1",
+      "2026-06-01"
+     ],
+     [
+      "SOP-1-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-09",
+      "Sec 2.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-09",
+      "Sec 2.1",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "sop"
+    ]
+   },
+   {
+    "id": "truth-trap-0",
+    "q": "Which current SOP authorizes verbal signoff under legacy checklist 1?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "SOP-1-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "SOP-0-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-01",
+      "Sec 3.1",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-01",
+      "Sec 1.1",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-05",
+      "Sec 3.1",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "trap"
+    ]
+   },
+   {
+    "id": "truth-sop-1",
+    "q": "For reserve crew activation, what is the current maximum callback interval?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "SOP-1-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "SOP-0-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "SOP-PAD-B",
+      "Sec 5.1",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-07",
+      "Sec 2.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-02",
+      "Sec 2.2",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "sop"
+    ]
+   },
+   {
+    "id": "truth-trap-1",
+    "q": "Which current SOP authorizes verbal signoff under legacy checklist 2?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "SOP-1-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "SOP-0-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-01",
+      "Sec 3.1",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-01",
+      "Sec 2.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-01",
+      "Sec 2.1",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "trap"
+    ]
+   },
+   {
+    "id": "truth-sop-2",
+    "q": "How long is pad observation after debris removal?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "SOP-PAD-B",
+      "Sec 5.1",
+      "2026-06-01"
+     ],
+     [
+      "SOP-0-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "SOP-1-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-07",
+      "Sec 2.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-04",
+      "Sec 3.1",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "sop"
+    ]
+   },
+   {
+    "id": "truth-trap-2",
+    "q": "Which current pad procedure accepts a lamp flash as clearance?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "SOP-PAD-B",
+      "Sec 5.1",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-01",
+      "Sec 2.1",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-10",
+      "Sec 2.1",
+      "2026-06-01"
+     ],
+     [
+      "SOP-1-B",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "OPS-REVIEW-05",
+      "Sec 2.1",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "trap"
+    ]
+   },
+   {
+    "id": "truth-pol-0",
+    "q": "What does the Cairnvale Mutual transport policy require about documenting why ground transport was clinically unsafe?",
+    "hit": false,
+    "recall": 0.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-2-V1",
+      "Sec 4.3",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.4",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-07",
+      "Sec 2.1",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-07",
+      "Sec 1.1",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-1",
+    "q": "What does the Cairnvale Mutual transport policy require about documenting why ground transport was clinically unsafe?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-0-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.2",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.4",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.2",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-2",
+    "q": "What does the Cairnvale Mutual transport policy require about a signed physician certification?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-0-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.4",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.2",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.3",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-3",
+    "q": "What does the Fenmere Benefit Trust transport policy require about documenting why ground transport was clinically unsafe?",
+    "hit": false,
+    "recall": 0.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-2-V1",
+      "Sec 4.3",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.4",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-06",
+      "Sec 2.2",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-09",
+      "Sec 2.2",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-4",
+    "q": "What does the Fenmere Benefit Trust transport policy require about documenting why ground transport was clinically unsafe?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-1-V2",
+      "Sec 4.2",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.4",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.2",
+      "2026-08-15"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-5",
+    "q": "What does the Fenmere Benefit Trust transport policy require about exceeds mileage cap?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-1-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.4",
+      "2026-08-15"
+     ],
+     [
+      "POL-1-V2",
+      "Sec 4.2",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.4",
+      "2026-08-15"
+     ],
+     [
+      "POL-0-V2",
+      "Sec 4.3",
+      "2026-08-15"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-6",
+    "q": "What does the Quill Basin Plan transport policy require about documenting why ground transport was clinically unsafe?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-2-V1",
+      "Sec 4.3",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.4",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-07",
+      "Sec 2.1",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-08",
+      "Sec 2.2",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   },
+   {
+    "id": "truth-pol-7",
+    "q": "What does the Quill Basin Plan transport policy require about a signed physician certification?",
+    "hit": true,
+    "recall": 1.0,
+    "forbidden_seen": false,
+    "mode": "hybrid",
+    "top5": [
+     [
+      "POL-2-V1",
+      "Sec 4.3",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.4",
+      "2026-06-01"
+     ],
+     [
+      "POL-2-V1",
+      "Sec 4.2",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-08",
+      "Sec 3.1",
+      "2026-06-01"
+     ],
+     [
+      "BILLING-REVIEW-10",
+      "Sec 2.2",
+      "2026-06-01"
+     ]
+    ],
+    "tags": [
+     "derived",
+     "policy"
+    ]
+   }
+  ],
+  "answers": [
+   {
+    "id": "a-unknown",
+    "q": "What is the cafeteria menu policy for night shifts?",
+    "role": "hr",
+    "kind": "document",
+    "kind_ok": true,
+    "refused": true,
+    "refusal_ok": true,
+    "grounded": null,
+    "bad_citations": [],
+    "numeric": null,
+    "expected_numbers": [],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 1.0,
+    "answer": "I can't answer that from governed data.",
+    "citations": [],
+    "reason": "no governed rows or ACTIVE passages in scope",
+    "search_mode": "hybrid",
+    "attempts": 0,
+    "ms": 19576.0
+   },
+   {
+    "id": "truth-aog-MX-2026-000004",
+    "q": "What did tail N331QZ's AOG in June cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     3,
+     22200,
+     1170
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The AOG for tail N331QZ in June cost us $22,200 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000004",
+      "2026-06-30"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 75654.4
+   },
+   {
+    "id": "truth-aog-MX-2026-000005",
+    "q": "What did tail N446XZ's AOG in June cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     4,
+     29600,
+     1092
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The AOG for tail N446XZ in June cost us $29,600 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000005",
+      "2026-06-30"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 77540.7
+   },
+   {
+    "id": "truth-aog-MX-2026-000003",
+    "q": "What did tail N218XZ's AOG in July cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     7,
+     51800,
+     936
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The AOG in July for tail N218XZ cost us $51,800 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000003",
+      "2026-07-31"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 76594.7
+   },
+   {
+    "id": "truth-aog-MX-2026-000007",
+    "q": "What did tail N678XZ's AOG in July cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     4,
+     29600,
+     1092
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The AOG in July for tail N678XZ cost us $29,600 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000007",
+      "2026-07-31"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 73170.0
+   },
+   {
+    "id": "truth-aog-MX-2026-000002",
+    "q": "What did tail N107QX's AOG in August cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     4,
+     29600,
+     1248
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The AOG cost for tail N107QX in August was $29,600 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000002",
+      "2026-08-31"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 75179.8
+   },
+   {
+    "id": "truth-aog-MX-2026-000006",
+    "q": "What did tail N564QZ's AOG in August cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     7,
+     51800,
+     1248
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The AOG in August for tail N564QZ cost us $51,800 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000006",
+      "2026-08-31"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 75604.9
+   },
+   {
+    "id": "truth-aog-MX-2026-000001",
+    "q": "What did tail N412AM's AOG in September cost us?",
+    "role": "exec",
+    "kind": "cross_department",
+    "kind_ok": true,
+    "refused": false,
+    "refusal_ok": true,
+    "grounded": true,
+    "bad_citations": [],
+    "numeric": 0.3333,
+    "expected_numbers": [
+     3,
+     22200,
+     1248
+    ],
+    "docs_ok": true,
+    "forbid_ok": true,
+    "quality": 0.8667,
+    "answer": "The estimated lost revenue for tail N412AM's AOG in September was $22,200 [1]. The estimated total cost for the AOG event was $22,200 [1].",
+    "citations": [
+     [
+      "gold.aog_events",
+      "mx_id=MX-2026-000001",
+      "2026-09-30"
+     ]
+    ],
+    "reason": null,
+    "search_mode": "hybrid",
+    "attempts": 1,
+    "ms": 76628.3
+   }
+  ]
+ }
+}

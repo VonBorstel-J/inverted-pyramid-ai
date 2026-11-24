@@ -14,7 +14,7 @@ from data_gen.generate_all import generate
 class BronzeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.temp = tempfile.TemporaryDirectory(dir=Path(__file__).parent)
+        cls.temp = tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parents[1] / "data_gen")
         cls.addClassCleanup(cls.temp.cleanup)
         cls.path = Path(cls.temp.name) / "one.duckdb"
         generate(42, cls.path)

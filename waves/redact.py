@@ -24,15 +24,32 @@ NAME_LABELS = (r"wristband(?: reads| says|:)?|report for|patient(?: name)?(?: is
                r"(?:wife|husband|spouse|daughter|son|mother|father|sister|brother|partner|guardian|son-in-law|daughter-in-law)"
                r"(?:,)?(?: named)?")
 STREET = (r"(?:St|Street|Ave|Avenue|Rd|Road|Blvd|Boulevard|Dr|Drive|Ln|Lane|Ct|Court|Way|Spur|Rise|Pl|Place|Cir|Circle|"
-          r"Ter|Terrace|Trl|Trail|Pkwy|Parkway|Hwy|Highway|Loop|Row|Run|Pass|Crossing|Sq|Square)\b\.?")
+          r"Ter|Terrace|Trl|Trail|Mews|Pkwy|Parkway|Hwy|Highway|Loop|Row|Run|Pass|Crossing|Sq|Square)\b\.?")
+
+# Names may be introduced by conversational context or by a following verb.
+PERSON = rf"{NAME_WORD}(?:[ \t]+{NAME_WORD})?"
+CONTEXT_NAMES = [
+    re.compile(rf"(?i:\b(?:spoke with|asked for|nickname|goes by|we used|between breaths))\s+[“\"']?({PERSON})"),
+    re.compile(rf"\b({PERSON})\s+(?i:received (?:the )?handoff|goes by|squeezed my hand|used the (?:old )?nickname)\b"),
+]
+DIGIT_WORD = r"(?:zero|oh|one|two|three|four|five|six|seven|eight|nine)"
+ORDINAL = r"(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|[a-z]+teenth|twentieth|thirtieth|(?:twenty|thirty)[- ](?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth))"
 
 # (tag, pattern). Order matters: specific before general.
 RULES = [
+    ("DATE", re.compile(rf"\b(?:the )?{ORDINAL} of {MONTHS},?\s+[’']?\d{{2,4}}\b", re.I)),
+    ("AGE", re.compile(r"\b(?:age[d]?|now)\s+(?:ninety(?:[- ](?:one|two|three|four|five|six|seven|eight|nine))?)\b", re.I)),
+    ("SSN", re.compile(r"\b(?:SS(?:N| card)?|social security)\s+(?:suffix|ends(?: in)?|last four)\s*[:#]?\s*\d{4}\b", re.I)),
+    ("MRN", re.compile(r"\b(?:wristband|band)(?: copied as)?\s+[A-Z]{1,4}-\d+(?:\s+\d+)?-[A-Z0-9]+\b", re.I)),
+    ("PHONE", re.compile(rf"\b{DIGIT_WORD}(?:[ -]+{DIGIT_WORD}){{6,14}}\b", re.I)),
+    ("VEHICLE", re.compile(r"\b(?:[Pp]arking slip shows|[Cc]ar at the gate wore|[Pp]late)\s+[A-Z]{1,3}-\d{3,6}-[A-Z]\b")),
+    ("DEVICE", re.compile(r"\b[A-Z]{1,4}/\d+/[A-Z0-9]+\b")),
+
     ("EMAIL", re.compile(r"\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b")),
     ("URL", re.compile(r"\b(?:https?://|www\.)\S+", re.I)),
     ("IP", re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")),
     ("SSN", re.compile(r"\b\d{3}-\d{2}-\d{4}\b|(?<=SSN )\d{9}\b|\b(?:SSN|social security(?: number| no\.?)?)\s*[:#]?\s*\d[\d -]{7,10}\d", re.I)),
-    ("PHONE", re.compile(r"(?:\+?1[\s.-]?)?(?:\(\d{3}\)\s*|\b\d{3}[\s.-])\d{3}[\s.-]\d{4}\b")),
+    ("PHONE", re.compile(r"(?:\+?1[\s.-]?)?(?:\(\d{3}\)\s*|\b\d{3}[\s.-])\d{3}[\s.-]\d{4}\b(?:\s*(?:ext\.?|extension|x)\s*\d+)?")),
     ("MRN", re.compile(
         r"(?:(?<=\bMRN)|(?<=\bMR#)|(?<=chart #)|(?<=chart)|(?<=record)|(?<=record #)|(?<=record number))\s*[:#-]?\s*[A-Z]{0,3}[/-]?\d[\w/-]*"
         r"|\bMR-\d{3,}(?:-[A-Z])?\b|\b[A-Z]{2}/\d{4,}\b|\b[A-Z]{2}\d{6,}\b", re.I)),
@@ -81,11 +98,11 @@ def rule_names(text):
     """Names the rules can see: words after a name label (wristband, patient,
     Mr./Dr., relatives...). The model task adds unlabelled names."""
     out = []
-    for m in LABELED_NAME.finditer(text):
-        n = _clean_name(m.group(1))
-        # labels are case-insensitive but the name itself must start upper-case
-        if n and n[0].isupper() and n.lower() not in NOT_NAMES:
-            out.append(n)
+    for pattern in (LABELED_NAME, *CONTEXT_NAMES):
+        for match in pattern.finditer(text):
+            name = _clean_name(match.group(1))
+            if name and name[0].isupper() and name.lower() not in NOT_NAMES:
+                out.append(name)
     return sorted(set(out))
 
 

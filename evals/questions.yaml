@@ -1,0 +1,141 @@
+# Eval questions (ARCHITECTURE.md section 7). Synthetic data only.
+#
+# retrieval: hit@5 against gold [doc_id, section]; `forbid` lists documents that
+#   must never appear in the top 5 (superseded traps); `expect_none` means no
+#   ACTIVE document is in effect on as_of, so nothing may be returned.
+#   `splits` limits a question to the splits whose documents it names. The
+#   runner adds questions derived from bronze.truth_sop_traps and
+#   bronze.truth_claim_risk for every split (so the hard split is covered
+#   without anyone reading its documents).
+# answers: answer.ask() checks. `expect_numbers_sql` runs against the split's
+#   truth tables (bronze.truth_*); `expect_numbers` are literal; `expect_docs`
+#   must be cited; `forbid_docs` / `forbid_text` must not appear;
+#   `expect_refusal` is true when the governed answer is a refusal.
+
+retrieval:
+  # ---- ops SOPs (ACTIVE versions)
+  - {id: sop0-1, q: "What is the minimum observation time after a rotor restart?", role: ops, gold: [[SOP-0-B, Sec 4.2]], forbid: [SOP-0-A], splits: [default]}
+  - {id: sop0-2, q: "How long must we observe the rotor after a restart before release?", role: exec, gold: [[SOP-0-B, Sec 4.2]], forbid: [SOP-0-A], splits: [default]}
+  - {id: sop0-3, q: "rotor restart inspection observation period", role: ops, gold: [[SOP-0-B, Sec 4.2]], splits: [default]}
+  - {id: sop0-4, q: "Where is the rotor restart signoff recorded?", role: ops, gold: [[SOP-0-B, Sec 4.2]], splits: [default]}
+  - {id: sop0-5, q: "Is the rotor restart observation 15 or 30 minutes?", role: exec, gold: [[SOP-0-B, Sec 4.2]], forbid: [SOP-0-A], tags: [trap], splits: [default]}
+  - {id: sop0-6, q: "minimum observation time rotor restart", role: ops, as_of: "2026-07-15", gold: [[SOP-0-B, Sec 4.2]], forbid: [SOP-0-A], splits: [default]}
+  - {id: sop1-1, q: "What is the maximum callback interval for reserve crew activation?", role: ops, gold: [[SOP-1-B, Sec 4.2]], forbid: [SOP-1-A], splits: [default]}
+  - {id: sop1-2, q: "How quickly must a reserve crew call back when activated?", role: exec, gold: [[SOP-1-B, Sec 4.2]], splits: [default]}
+  - {id: sop1-3, q: "reserve crew activation callback limit", role: ops, gold: [[SOP-1-B, Sec 4.2]], splits: [default]}
+  - {id: sop1-4, q: "Is the reserve callback interval still 45 minutes?", role: ops, gold: [[SOP-1-B, Sec 4.2]], forbid: [SOP-1-A], tags: [trap], splits: [default]}
+  - {id: sop1-5, q: "Where is signoff recorded when activating the reserve crew?", role: ops, gold: [[SOP-1-B, Sec 4.2]], splits: [default]}
+  - {id: sop1-6, q: "reserve crew callback time", role: ops, as_of: "2026-10-01", gold: [[SOP-1-B, Sec 4.2]], splits: [default]}
+  # ---- superseded traps: the only matching text is in a SUPERSEDED SOP
+  - {id: trap-1, q: "Which current SOP authorizes verbal signoff under legacy checklist 1?", role: ops, gold: [], forbid: [SOP-0-A], tags: [trap], splits: [default]}
+  - {id: trap-2, q: "Which current SOP authorizes verbal signoff under legacy checklist 2?", role: ops, gold: [], forbid: [SOP-1-A], tags: [trap], splits: [default]}
+  - {id: trap-3, q: "Can crew still use verbal signoff for a rotor restart inspection?", role: ops, gold: [[SOP-0-B, Sec 4.2]], forbid: [SOP-0-A], tags: [trap], splits: [default]}
+  - {id: trap-4, q: "legacy checklist observation time of 15 minutes", role: exec, gold: [], forbid: [SOP-0-A, SOP-1-A], tags: [trap], splits: [default]}
+  # ---- nothing in effect yet on as_of
+  - {id: asof-1, q: "minimum observation time rotor restart", role: ops, as_of: "2026-05-01", expect_none: true, forbid: [SOP-0-A], tags: [as_of], splits: [default]}
+  - {id: asof-2, q: "reserve crew callback interval", role: ops, as_of: "2026-05-15", expect_none: true, forbid: [SOP-1-A], tags: [as_of], splits: [default]}
+  # ---- billing payer policies
+  - {id: pol-1, q: "What does Cairnvale Mutual require to justify air instead of ground transport?", role: billing, gold: [[POL-0, Sec 4.2]], splits: [default]}
+  - {id: pol-2, q: "Cairnvale Mutual physician certification requirement", role: billing, gold: [[POL-0, Sec 4.3]], splits: [default]}
+  - {id: pol-3, q: "Fenmere Benefit Trust ground transport documentation", role: billing, gold: [[POL-1, Sec 4.2]], splits: [default]}
+  - {id: pol-4, q: "Does Fenmere Benefit Trust need a signed physician certification?", role: billing, gold: [[POL-1, Sec 4.3]], splits: [default]}
+  - {id: pol-5, q: "Quill Basin Plan medical necessity: why was ground transport unsafe?", role: billing, gold: [[POL-2, Sec 4.2]], splits: [default]}
+  - {id: pol-6, q: "Quill Basin Plan physician certification in the chart", role: billing, gold: [[POL-2, Sec 4.3]], splits: [default]}
+  - {id: pol-7, q: "Which section covers ground transport being clinically unsafe for Cairnvale Mutual claims?", role: exec, gold: [[POL-0, Sec 4.2]], splits: [default]}
+  - {id: pol-8, q: "For a Fenmere claim, which section requires the physician to sign?", role: billing, gold: [[POL-1, Sec 4.3]], splits: [default]}
+  - {id: pol-9, q: "Quill Basin claim at risk for a missing ground contraindication: which policy section applies?", role: billing, gold: [[POL-2, Sec 4.2]], splits: [default]}
+  - {id: pol-10, q: "payer requirement to document why the ground ambulance was not safe", role: billing, gold: [[POL-0, Sec 4.2], [POL-1, Sec 4.2], [POL-2, Sec 4.2]], splits: [default]}
+  - {id: pol-11, q: "signed physician certification required in the chart", role: billing, gold: [[POL-0, Sec 4.3], [POL-1, Sec 4.3], [POL-2, Sec 4.3]], splits: [default]}
+  - {id: pol-12, q: "Cairnvale Mutual transport policy in effect", role: billing, as_of: "2026-09-15", gold: [[POL-0, null]], splits: [default]}
+  # ---- finance memos
+  - {id: fin-1, q: "What value do we assign to each missed AOG request?", role: finance, gold: [[FIN-REV, Sec 1.1]], splits: [default]}
+  - {id: fin-2, q: "How is the no-outage revenue budget modeled?", role: finance, gold: [[FIN-REV, Sec 1.1]], splits: [default]}
+  - {id: fin-3, q: "When are collections recognized?", role: exec, gold: [[FIN-REV, Sec 1.1]], splits: [default]}
+  - {id: fin-4, q: "What hourly rate do we charge for recovery overtime?", role: finance, gold: [[FIN-LAB, Sec 2.3]], splits: [default]}
+  - {id: fin-5, q: "repair labor and parts rate per outage hour", role: finance, gold: [[FIN-LAB, Sec 2.3]], splits: [default]}
+  - {id: fin-6, q: "How are AOG recovery expenses allocated?", role: exec, gold: [[FIN-LAB, Sec 2.3]], splits: [default]}
+  # ---- HR handbook
+  - {id: hr-1, q: "What is the maximum duty length per shift?", role: hr, gold: [[HR-DUTY, Sec 2.1]], splits: [default]}
+  - {id: hr-2, q: "Do we have to record recovery overtime?", role: hr, gold: [[HR-DUTY, Sec 2.1]], splits: [default]}
+  - {id: hr-3, q: "How many hours can a crew member be on duty in one shift?", role: exec, gold: [[HR-DUTY, Sec 2.1]], splits: [default]}
+  - {id: hr-4, q: "When does a flight credential stop being valid?", role: hr, gold: [[HR-LIC, Sec 3.4]], splits: [default]}
+  - {id: hr-5, q: "When must crew with an expired license come off flight duty?", role: hr, gold: [[HR-LIC, Sec 3.4]], splits: [default]}
+  - {id: hr-6, q: "flight credential checks expiry rule", role: exec, gold: [[HR-LIC, Sec 3.4]], splits: [default]}
+  # ---- cross-department (any gold section counts as a hit; recall counts all)
+  - {id: x-1, q: "What did tail N412AM's AOG in September cost us?", role: exec, gold: [[FIN-REV, Sec 1.1], [FIN-LAB, Sec 2.3]], tags: [cross], splits: [default]}
+  - {id: x-2, q: "How do we estimate the lost revenue and the overtime cost of an AOG?", role: exec, gold: [[FIN-REV, Sec 1.1], [FIN-LAB, Sec 2.3]], tags: [cross], splits: [default]}
+  - {id: x-3, q: "AOG recovery overtime: what is the duty cap and the overtime rate?", role: exec, gold: [[HR-DUTY, Sec 2.1], [FIN-LAB, Sec 2.3]], tags: [cross], splits: [default]}
+  - {id: x-4, q: "Grounded aircraft: value of missed requests and the claim documentation payers need", role: exec, gold: [[FIN-REV, Sec 1.1], [POL-0, Sec 4.2], [POL-1, Sec 4.2], [POL-2, Sec 4.2]], tags: [cross], splits: [default]}
+  - {id: x-5, q: "Crew overtime from a grounding: what rate applies and how long may a shift run?", role: exec, gold: [[FIN-LAB, Sec 2.3], [HR-DUTY, Sec 2.1]], tags: [cross], splits: [default]}
+
+answers:
+  - id: a-showcase
+    q: "What did tail N412AM's AOG in September cost us?"
+    role: exec
+    kind: cross_department
+    expect_numbers_sql: >-
+      WITH i AS (SELECT mx_id, sum(lost_transports) AS lost_transports, sum(lost_revenue) AS lost_revenue
+                 FROM bronze.truth_aog_impacts WHERE tail_number = 'N412AM' AND month = DATE '2026-09-01' GROUP BY mx_id)
+      SELECT lost_transports, lost_revenue,
+             (SELECT sum(overtime_cost) FROM bronze.truth_overtime o WHERE o.mx_id = i.mx_id) AS overtime_cost FROM i
+    expect_docs: [FIN-REV]
+    splits: [default]
+  - id: a-claims-den
+    q: "How many claims were at risk at DEN-01 in September?"
+    role: billing
+    kind: metric
+    expect_numbers_sql: >-
+      SELECT count(*) FILTER (WHERE r.at_risk) AS at_risk FROM bronze.truth_claim_risk r
+      JOIN bronze.claims c USING (claim_id) JOIN bronze.transports t USING (transport_id)
+      WHERE t.base_id = 'DEN-01' AND date_trunc('month', CAST(t.date AS DATE)) = DATE '2026-09-01'
+    splits: [default]
+  - id: a-rotor
+    q: "For rotor restart inspection, what is the current minimum observation time?"
+    role: ops
+    kind: document
+    expect_numbers: [30]
+    expect_docs: [SOP-0-B]
+    forbid_docs: [SOP-0-A]
+    forbid_text: ["15 minutes"]
+    splits: [default]
+  - id: a-ot-rate
+    q: "What hourly rate do we charge for recovery overtime?"
+    role: finance
+    kind: document
+    expect_numbers: [78]
+    expect_docs: [FIN-LAB]
+    splits: [default]
+  - id: a-duty
+    q: "What is the maximum duty length per shift?"
+    role: hr
+    kind: document
+    expect_numbers: [14]
+    expect_docs: [HR-DUTY]
+    splits: [default]
+  - id: a-showcase-wrong-role
+    q: "What did tail N412AM's AOG in September cost us?"
+    role: billing
+    kind: cross_department
+    expect_refusal: true
+    splits: [default]
+  - id: a-revenue-den
+    q: "How far did DEN-01 revenue miss plan in September?"
+    role: exec
+    kind: metric
+    expect_numbers_sql: >-
+      SELECT variance FROM bronze.truth_ledger_variances
+      WHERE base_id = 'DEN-01' AND month = DATE '2026-09-01' AND line = 'revenue'
+    splits: [default]
+  - id: a-trap
+    q: "Which current SOP authorizes verbal signoff under legacy checklist 1?"
+    role: ops
+    kind: document
+    forbid_docs: [SOP-0-A]
+    forbid_text: ["15 minutes", "verbal signoff is authorized"]
+    splits: [default]
+  - id: a-unknown
+    q: "What is the cafeteria menu policy for night shifts?"
+    role: hr
+    as_of: "2026-03-01"
+    kind: document
+    expect_refusal: true

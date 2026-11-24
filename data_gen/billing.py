@@ -79,11 +79,21 @@ def chart(d, n, transport, doc, case, miles, explicit, certified):
     d.add("truth_epcrs", doc, transport, diagnosis, finding, certified, miles, explicit, *span)
 
 
-def generate(d):
+def default_documents(d):
     for i, payer in enumerate(PAYERS):
         d.document(f"POL-{i}", "BILLING", payer + " transport policy", "ACTIVE", START, {
             "Sec 4.2": "Document why the available ground transport was clinically unsafe.",
             "Sec 4.3": "Include signed physician certification in the chart."})
+
+
+def generate(d, hard=False):
+    if hard:
+        from . import hard_policy, hard_templates
+        hard_policy.documents(d)
+        cases = hard_templates.CLINICAL
+    else:
+        default_documents(d)
+        cases = CASES
     missing = set(d.rng.sample(range(1, 2001), 500))
     fleet = {a["tail_number"]: a["type"] for a in d.tables["aircraft"]}
     accepted = (row for row in d.tables["dispatch_log"] if row["outcome"] == "accepted")
@@ -91,12 +101,16 @@ def generate(d):
         tr, tail, day = row["transport_id"], row["tail_number"], row["ts"].date()
         doc, claim = key("EP", n), key("CL", n)
         p = d.rng.randrange(len(PAYERS))
-        case = d.rng.choice(CASES)
+        case = d.rng.choice(cases)
         miles = d.rng.randint(27, 203)
-        certified = d.rng.random() < 0.96
         explicit = n not in missing
-        chart(d, n, tr, doc, case, miles, explicit, certified)
-        risk = not (explicit and certified)
+        if hard:
+            certified = hard_templates.chart(d, n, tr, doc, case, miles, explicit)
+            risk = hard_policy.reconcile(d, claim, p, day, explicit, certified, miles)
+        else:
+            certified = d.rng.random() < 0.96
+            chart(d, n, tr, doc, case, miles, explicit, certified)
+            risk = not (explicit and certified)
         status = d.rng.choices(("paid", "pending", "denied"), (4, 2, 5) if risk else (24, 2, 1))[0]
         billed = 8500 + 52*miles
         paid = billed * (71 + p*3) // 100 if status == "paid" else 0
@@ -105,5 +119,6 @@ def generate(d):
               "A0430" if fleet[tail] == "fixed-wing" else "A0431", miles, case[1], billed, paid, status)
         d.add("claims", claim, tr, PAYERS[p], min(END, day + timedelta(days=d.rng.randint(0, 3))),
               status, denial, paid)
-        reason = "missing ground contraindication" if not explicit else ("missing certification" if not certified else "meets policy")
-        d.add("truth_claim_risk", claim, risk, reason, f"POL-{p}", "Sec 4.3" if explicit and not certified else "Sec 4.2")
+        if not hard:
+            reason = "missing ground contraindication" if not explicit else ("missing certification" if not certified else "meets policy")
+            d.add("truth_claim_risk", claim, risk, reason, f"POL-{p}", "Sec 4.3" if explicit and not certified else "Sec 4.2")

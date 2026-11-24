@@ -1,0 +1,51 @@
+{
+ "split": "hard",
+ "limit": 200,
+ "providers": [
+  "rules",
+  "local"
+ ],
+ "table": "provider charts extract_acc contraind redact_recall redact_prec reconcile policy version hit@5  retr_mode answers grounded numeric extract_ms answer_ms\n-------- ------ ----------- --------- ------------- ----------- --------- ------ ------- ------ --------- ------- -------- ------- ---------- ---------\nrules    200    0.268       0.18      0.1497        1.0         0.38      0.0    0.7     0.8571 hybrid    8       1.0      0.6667  1.0        555.7    \nlocal    200    0.673       0.39      0.4884        0.8939      0.4       0.0    0.7     0.8571 hybrid    8       1.0      0.3333  45441.9    75629.6  ",
+ "summary": [
+  {
+   "provider": "rules",
+   "charts": 200,
+   "extract_acc": 0.268,
+   "contraind": 0.18,
+   "redact_recall": 0.1497,
+   "redact_prec": 1.0,
+   "reconcile": 0.38,
+   "policy": 0.0,
+   "version": 0.7,
+   "hit@5": 0.8571,
+   "retr_mode": "hybrid",
+   "answers": 8,
+   "grounded": 1.0,
+   "numeric": 0.6667,
+   "extract_ms": 1.0,
+   "answer_ms": 555.7
+  },
+  {
+   "provider": "local",
+   "charts": 200,
+   "extract_acc": 0.673,
+   "contraind": 0.39,
+   "redact_recall": 0.4884,
+   "redact_prec": 0.8939,
+   "reconcile": 0.4,
+   "policy": 0.0,
+   "version": 0.7,
+   "hit@5": 0.8571,
+   "retr_mode": "hybrid",
+   "answers": 8,
+   "grounded": 1.0,
+   "numeric": 0.3333,
+   "extract_ms": 45441.9,
+   "answer_ms": 75629.6
+  }
+ ],
+ "results": [
+  "20261123T193325Z-hard-rules.json",
+  "20261124T060308Z-hard-local.json"
+ ]
+}

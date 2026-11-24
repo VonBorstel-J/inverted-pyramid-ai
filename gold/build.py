@@ -38,6 +38,8 @@ def build_metrics(con):
 
 
 def build(con):
+    from search import index as search_index
     n = build_entity_links(con)
     build_metrics(con)
+    search_index.build(con)  # gold.search_chunks: ACTIVE sections + de-identified narratives
     return n

@@ -22,12 +22,13 @@ def month(day):
 
 
 class Dataset:
-    def __init__(self, seed):
+    def __init__(self, seed, schemas=None):
+        self.schemas = SCHEMAS if schemas is None else schemas
         self.rng = Random(seed)
         self.tables = defaultdict(list)
 
     def add(self, table, *values):
-        self.tables[table].append(dict(zip(SCHEMAS[table], values, strict=True)))
+        self.tables[table].append(dict(zip(self.schemas[table], values, strict=True)))
 
     def document(self, doc_id, dept, title, status, effective, sections):
         import json

@@ -46,7 +46,7 @@ def redact_step(con, ctx, res):
             used, names = "rules", []
         deid, counts = R.redact(text, names)
         p = provenance(r["doc_id"], 1, "billing.redact", used, model if used != "rules" else "regex",
-                       version if used != "rules" else "redact_rules.v1")
+                       version if used != "rules" else "redact_rules.v2")
         leaked = find_phi(deid)
         if leaked:  # gate: never write text the PHI guard would refuse
             out.append(({"_reject": f"identifier pattern left after redaction: {','.join(leaked)}",

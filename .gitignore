@@ -2,6 +2,7 @@
 __pycache__/
 *.duckdb
 *.duckdb.wal
-runs/*.jsonl
+runs/*
 !runs/.keep
 .pytest_cache/
+models/

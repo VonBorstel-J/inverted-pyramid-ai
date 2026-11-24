@@ -2,7 +2,7 @@
 
 This system gives governed AI answers over the operations data of an air-medical transport company: billing and revenue cycle, flight operations, finance, and HR. **All data is synthetic.** No real patient, employee, aircraft or company data is ever used. The system has no link to any real company.
 
-Every builder (Claude, Codex, Gemini, a local model) builds against this file. Change it only on purpose, in its own commit.
+This document records the original design and its test targets. The [claim walkthrough](docs/claim-review.md) and [local checks](docs/LOCAL-VERIFICATION.md) report the results measured with synthetic records.
 
 ## 1. The idea
 
@@ -22,7 +22,7 @@ Frontline work produces the most data: flight charts (ePCRs), claims, dispatch l
  ==================== GOLD: UNIFIED GOVERNED SEMANTIC POOL ====================
   entity graph  transport_id <-> tail_number <-> base_id <-> claim_id <-> crew_id
   semantic views (governed metrics) + hybrid search with citations
-  role-based views: masking and row access (the HIPAA Safe Harbor boundary)
+  role-based views: masking and row access (role-specific views for synthetic records)
 ```
 
 **Example cross-department question:** "What did tail N412AM's hydraulic AOG in September cost us?" The answer should combine:
@@ -122,7 +122,7 @@ Every wave step is a function `run(con, ctx) -> StepResult`. It reads one layer 
   - physician certification yes/no;
   - loaded miles.
 
-  Then redact all 18 HIPAA Safe Harbor identifiers into `silver.epcr_deid`. Raw PHI never leaves bronze. The redaction is rules first (regex), plus the model for names in free text. It is measured by recall, and the target is no leaked identifier.
+  Write redacted chart text into `silver.epcr_deid` and measure the planted identifiers still visible afterward. The redaction is rules first (regex), plus the model for names in free text. The evaluation compares the output with labeled spans supplied by the synthetic data generator.
 - **Ops:** parse maintenance free text into issue category, system and severity. Index SOPs, keeping only ACTIVE documents effective by the event date.
 - **Finance:** normalize and tag each ledger line against its budget line.
 - **HR:** extract each license's expiry status and the overtime cause from reason_text, linking to a tail or AOG when the text names one.
